@@ -14,10 +14,15 @@ matplotlib = "^3.9.2"
 opencv-python = "^4.10.0.84"
 pandas = "^2.2.3"
 openai-whisper = "^20240930"
+catboost = "^1.2.7"
+scikit-learn = "^1.5.2"
+nltk = "^3.9.1"
+langchain-huggingface = "^0.1.2"
 
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
 
 [build-system]
 requires = ["poetry-core"]
