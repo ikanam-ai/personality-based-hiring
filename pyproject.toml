@@ -8,16 +8,20 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 transformers = "^4.46.2"
-pillow = "^11.0.0"
-torch = "^2.5.1"
+pillow = "^10.3.0"
+torch = "2.4.0"
 matplotlib = "^3.9.2"
 opencv-python = "^4.10.0.84"
 pandas = "^2.2.3"
-openai-whisper = "^20240930"
 catboost = "^1.2.7"
 scikit-learn = "^1.5.2"
 nltk = "^3.9.1"
 langchain-huggingface = "^0.1.2"
+vllm = "^0.6.3.post1"
+langchain = "^0.3.7"
+pymongo = "^4.10.1"
+setuptools = "^75.3.0"
+openai-whisper = "^20240930"
 
 
 [tool.poetry.group.dev.dependencies]
