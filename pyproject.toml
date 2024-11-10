@@ -22,6 +22,7 @@ langchain = "^0.3.7"
 pymongo = "^4.10.1"
 setuptools = "^75.3.0"
 openai-whisper = "^20240930"
+streamlit = "^1.40.0"
 
 
 [tool.poetry.group.dev.dependencies]
