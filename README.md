@@ -40,8 +40,8 @@ curl -sSL https://install.python-poetry.org | python3 -
 Клонируйте репозиторий проекта:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/ikanam-ai/personality-based-hiring.git
+cd personality-based-hiring
 ```
 
 ### 3. Запустите mongodb
