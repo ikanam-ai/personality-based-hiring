@@ -59,6 +59,28 @@ poetry install
 poetry shell
 ```
 
+### 5. Создайте конфиги с данными для подключения к MongoDB
+`config.py`
+`streamlit/config.py`
+
+```python
+MONGO_USERNAME = <...>
+MONGO_PASSWORD = <...>
+MONGO_HOST = <...>
+MONGO_PORT = <...>
+```
+
+
+### 6. Запустите скрипты для работы
+
+```bash
+poetry run python src/consumer/broker.py
+cd streamlit
+poetry run streamlit run streamlit_app.py
+```
+В терминале будет показан адрес, на котором запущен сервис
+
+
 ## Screencast
 
 https://github.com/user-attachments/assets/3778f3e1-7410-4cbe-a873-70f484fd392f
