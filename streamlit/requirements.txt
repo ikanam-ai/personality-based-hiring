@@ -1,9 +1,0 @@
-streamlit
-pandas
-base64
-pymongo
-zipfile
-Image
-opencv-python
-bson
-langchain

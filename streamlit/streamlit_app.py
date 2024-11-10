@@ -10,10 +10,13 @@ bot_page = st.Page("bot.py", title="Чат-бот"
 mbti_page = st.Page("mbti.py", title="MBTI тест"
 # , icon=":material/delete:"
 )
+hh_page = st.Page("hh.py", title="Вакансии"
+# , icon=":material/delete:"
+)
 
 pg = st.navigation(
     {
-            "Main": [main_page],
+            "Main": [main_page, hh_page],
             "Плюшки": [bot_page, mbti_page]
         }
 )
@@ -23,6 +26,6 @@ st.set_page_config(page_title="Ikanam bot",
 )
 pg.run()
 
-logo = '/Users/y1ov/Work/streamlits/senej/files/beta-1.png'
+logo = 'files/beta-1.png'
 
 st.logo(logo, icon_image=logo)
