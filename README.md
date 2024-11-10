@@ -26,6 +26,7 @@
 
 Для установки и запуска проекта используйте [Poetry](https://python-poetry.org/), чтобы управлять зависимостями и виртуальной средой.
 
+
 ### 1. Установите Poetry
 
 Если у вас еще не установлен Poetry, выполните следующую команду для его установки:
@@ -43,7 +44,23 @@ git clone https://github.com/your-username/your-repository.git
 cd your-repository
 ```
 
-### 3. Установите зависимости
+### 3. Запустите mongodb
+
+Перейдите в папку monga:
+
+cd monga
+
+Запустите Docker Compose:
+
+docker-compose up -d
+
+#### Доступ к сервисам
+
+- MongoDB будет доступна на порту, указанном в переменной MONGO_INITDB_ROOT_PORT (по умолчанию 27017).
+- Mongo Express — интерфейс для управления MongoDB, доступен по адресу http://localhost:<ME_CONFIG_MONGODB_ADMIN_PORT> (по умолчанию 8081).
+
+
+### 4. Установите зависимости
 
 Используйте Poetry для установки всех зависимостей:
 
@@ -51,7 +68,7 @@ cd your-repository
 poetry install
 ```
 
-### 4. Активируйте виртуальную среду
+### 5. Активируйте виртуальную среду
 
 Запустите виртуальную среду, чтобы работать с проектом:
 
@@ -59,7 +76,7 @@ poetry install
 poetry shell
 ```
 
-### 5. Создайте конфиги с данными для подключения к MongoDB
+### 6. Создайте конфиги с данными для подключения к MongoDB
 `config.py`
 `streamlit/config.py`
 
@@ -71,7 +88,7 @@ MONGO_PORT = <...>
 ```
 
 
-### 6. Запустите скрипты для работы
+### 7. Запустите скрипты для работы
 
 ```bash
 poetry run python src/consumer/broker.py
