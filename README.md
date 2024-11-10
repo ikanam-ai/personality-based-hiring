@@ -48,11 +48,26 @@ cd your-repository
 
 Перейдите в папку monga:
 
+```bash
 cd monga
+```
+
+Создайте файл `.env`
+
+```
+MONGO_INITDB_ROOT_USERNAME=имя_пользователя_админа
+MONGO_INITDB_ROOT_PASSWORD=пароль_админа
+MONGO_INITDB_ROOT_PORT=27017
+ME_CONFIG_MONGODB_ADMIN_USERNAME=логин_админ_панели
+ME_CONFIG_MONGODB_ADMIN_PASSWORD=пароль_админ_панели
+ME_CONFIG_MONGODB_ADMIN_PORT=8081
+```
 
 Запустите Docker Compose:
 
+```bash
 docker-compose up -d
+```
 
 #### Доступ к сервисам
 
