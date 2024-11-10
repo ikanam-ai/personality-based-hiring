@@ -112,7 +112,7 @@ MONGO_PORT = <...>
 ### 7. Запустите скрипты для работы
 
 ```bash
-poetry run python src/consumer/broker.py
+nohup poetry run python src/consumer/broker.py &
 cd streamlit
 poetry run streamlit run streamlit_app.py
 ```
