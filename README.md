@@ -78,8 +78,7 @@ poetry run python src/consumer/broker.py
 cd streamlit
 poetry run streamlit run streamlit_app.py
 ```
-В терминале будет показан адрес, на котором запущен сервис
-
+Сервис будет запущен по адресу `localhost:27368`
 
 ## Screencast
 
