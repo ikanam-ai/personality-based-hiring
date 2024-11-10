@@ -69,6 +69,12 @@ ME_CONFIG_MONGODB_ADMIN_PORT=8081
 docker-compose up -d
 ```
 
+Вернитесь в корневую директорию
+
+```bash
+cd ..
+```
+
 #### Доступ к сервисам
 
 - MongoDB будет доступна на порту, указанном в переменной MONGO_INITDB_ROOT_PORT (по умолчанию 27017).
