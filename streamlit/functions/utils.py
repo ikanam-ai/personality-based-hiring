@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 sys.path.append('../')
 
-from config import username, password, mongo_host, mongo_port
+from config import MONGO_HOST, MONGO_PASSWORD, MONGO_PORT, MONGO_USERNAME
 
 
 ################################################################################################################################################
@@ -42,10 +42,10 @@ mbti_to_ocean = {
 ################################################################################################################################################
 
 # Кодируем учетные данные в base64 и создаем URL для MongoDB
-auth_base64 = base64.b64encode(f"{username}:{password}".encode()).decode()
+auth_base64 = base64.b64encode(f"{MONGO_USERNAME}:{MONGO_PASSWORD}".encode()).decode()
 client = pymongo.MongoClient(
-    f"mongodb://{username}:{password}@{mongo_host}:{mongo_port}/?authSource=admin",
-    username=username, password=password
+    f"mongodb://{MONGO_USERNAME}:{MONGO_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}/?authSource=admin",
+    username=MONGO_USERNAME, password=MONGO_PASSWORD
 )
 
 # Подключаемся к базе данных и коллекции

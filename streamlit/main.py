@@ -3,6 +3,7 @@ import time
 import pandas as pd
 import base64
 import os
+import sys
 import pymongo
 import zipfile
 import random
@@ -14,16 +15,17 @@ from functions.utils import producer_promts, get_response
 from functions.utils import get_middle_frame
 from functions.utils import generate_ocean_scores, plot_ocean_radar
 
-from config import username, password, mongo_host, mongo_port
+sys.path.append('../')
 
+from config import MONGO_HOST, MONGO_PASSWORD, MONGO_PORT, MONGO_USERNAME
 
 ################################################################################################################################################
 
 # Кодируем учетные данные в base64 и создаем URL для MongoDB
-auth_base64 = base64.b64encode(f"{username}:{password}".encode()).decode()
+auth_base64 = base64.b64encode(f"{MONGO_USERNAME}:{MONGO_PASSWORD}".encode()).decode()
 client = pymongo.MongoClient(
-    f"mongodb://{username}:{password}@{mongo_host}:{mongo_port}/?authSource=admin",
-    username=username, password=password
+    f"mongodb://{MONGO_USERNAME}:{MONGO_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}/?authSource=admin",
+    username=MONGO_USERNAME, password=MONGO_PASSWORD
 )
 
 # Подключаемся к базе данных и коллекции
