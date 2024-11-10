@@ -23,6 +23,8 @@ pymongo = "^4.10.1"
 setuptools = "^75.3.0"
 openai-whisper = "^20240930"
 streamlit = "^1.40.0"
+langchain-community = "^0.3.5"
+gigachat = "^0.1.35"
 
 
 [tool.poetry.group.dev.dependencies]
